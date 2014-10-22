@@ -1,0 +1,25 @@
+html,
+body {
+    font-family: calibri, sans-serif;
+}
+.stars {
+    background-image: url(../images/hori.png), url(../images/stars.png);
+    background-repeat: repeat-x, repeat-x repeat-y;
+}
+label {
+    color: white;
+}
+select {
+    font-family: calibri;
+    width: 205px;
+}
+input[name="password"] {
+    width: 200px;
+}
+input {
+    font-family: calibri;
+    background: white;
+}
+#main {
+    text-align: center;
+}

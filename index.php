@@ -32,20 +32,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>place news login</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/favicon.ico">
     <style>
 
     </style>
 </head>
-<body>
-<div id="border">
-    <form action="" method="post">
-        <label>your place : </label><?php include 'selection.php'; ?><br>
-        <label>password : </label><input name="password" type="password">
-        <input type="submit" value="submit"><br>
-
+<body class="stars">
+ <div id="main">
+  <a href="http://placeins.com/">
+  <img id="logo" src="images/logo.png" alt="place in space logo" align="middle" >
+     </a>
+      <br><br>
+       <form action="" method="post">
+        <label>choose your place : </label><?php include 'selection.php'; ?><br>
+        <br>
+        <label>password : </label>
+        <input id="password" name="password" placeholder="**********" type="password">
+        <input name="submit" type="submit" value=" Login ">
         <p style="color: red;"><?php echo $error; ?>
     </form>
 </div>
-
+    
 </body>
 </html>

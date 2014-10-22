@@ -76,22 +76,28 @@ mysqli_close($connection);
 <head>
     <meta charset="UTF-8">
     <title>place news</title>
+     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
-<body>
-<p>welcome to <?php echo $_SESSION['title'] ?> news</p>
-
+<body class="stars">
+  <a href="http://placeins.com/">
+  <img id="logo" src="images/logo.png" alt="place in space logo" align="middle">
+  </a>
+  <br><br>
+<label>welcome to <?php echo $_SESSION['title'] ?> news</label>
+<br><br>
 <form action="" method="post">
-    new password: <input type="text" name="password" maxlength="20">
+    <label>new password:</label> <input type="text" name="password" maxlength="20">
     <input type="submit" name="change" value="change">
 
     <p style="color: green;"><?php echo $password; ?></p>
 
-    edit your news in ua:<br>
-    <textarea style="width: 300px;height:200px;" name="text_ua" maxlength="200"><?php echo $text_ua ?></textarea><br>
-    us:<br>
-    <textarea style="width: 300px;height:200px;" name="text_us" maxlength="200"><?php echo $text_us ?></textarea><br>
-    ru:<br>
+    <label>edit your news in russian:</label><br><br>
     <textarea style="width: 300px;height:200px;" name="text_ru" maxlength="200"><?php echo $text_ru ?></textarea>
+    <label>ukrainian:</label>
+    <textarea style="width: 300px;height:200px;" name="text_ua" maxlength="200"><?php echo $text_ua ?></textarea>
+    <label>english:</label>
+    <textarea style="width: 300px;height:200px;" name="text_us" maxlength="200"><?php echo $text_us ?></textarea>
     <input type="submit" name="save" value="save">
     <input type="submit" name="delete" value="delete">
 
